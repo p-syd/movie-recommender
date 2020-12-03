@@ -59,6 +59,13 @@
 		box-sizing: border-box;
 		background-color: #008CBA;
 		border-radius: 4px;
+		
+	}
+	
+	image 
+	{
+		height : 20%;
+		width : 40%;
 	}
 </style>
 </head>
@@ -66,22 +73,22 @@
 <body>
 	<div class="hero-image">
 		<div class="hero-text">
-			<h1 style="font-size:50px">MOVIE RECOMMENDER!</h1>
+			<h1 style="font-size:50px">VISUALIZATIONS</h1>
 			<br>
 			<br>
-			<h2 style="font-size:30px">Enter a movie, and we recommend similar movies to you! </h3>
-			<br>
-			<br>
-				<center>
-					<form method ='post' enctype=multipart/form-data>
-					
-					<input type="text" name="question" value="visual">
-					<br>
-					<input type="submit" name="Recommend" value="Recommend"><ul class="actions">
-					<br><br><br>
-					<input type="submit" name="Recommend" value="predict"><ul class="actions">
-				</center>
+			
+				
+					<img src="{{url_for('static', filename='K.png')}}" width="600" height="500"/>
+
 		</div>
 	</div>
 </body>
 </html>
+
+
+
+
+
+
+
+

@@ -11,22 +11,24 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def hello_world():
-	if request.method == 'GET':
-		return render_template('index.html')
-	
-	question=request.form.get('question')
-	#	image = file.read()
-	#filename = secure_filename(file.filename)
-	
 
-	
-	from to_call import f
-	li=f(question)
-	
-	print(li)
-
-#		filename = 'http://127.0.0.1:5000/' + filename
-		#return render_template('result.html',category=fin,filename=filename)
-	return render_template('result.html', your_list=li)
+	if request.method == 'POST':
+            if request.form['Recommend'] == 'Recommend':
+            	question=request.form.get('question')
+            	from to_call import f
+            	li=f(question)
+            	return render_template('result.html', your_list=li)
+				
+                
+            elif  request.form['Recommend'] == 'predict':
+            	
+            	return render_template('graphs.html')
+                
+            else:
+                
+            	return render_template("index.html")
+	elif request.method == 'GET':
+            
+            return render_template('index.html')
 
 
