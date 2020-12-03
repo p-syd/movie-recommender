@@ -3,8 +3,8 @@ import numpy as np
 from sklearn.neighbors import NearestNeighbors
 from scipy.sparse import csr_matrix
 def f(inp):
-    movies_df = pd.read_csv('/home/sid/Downloads/archives/movies.csv',dtype={'movieId': 'int32', 'title': 'str'})
-    rating_df=pd.read_csv('/home/sid/Downloads/archives/ratings.csv',usecols=['userId', 'movieId', 'rating'])
+    movies_df = pd.read_csv('movies.csv',dtype={'movieId': 'int32', 'title': 'str'})
+    rating_df=pd.read_csv('ratings.csv',usecols=['userId', 'movieId', 'rating'])
 
     movies_df.head()
 
@@ -53,8 +53,8 @@ def f(inp):
     sns.pairplot(movie_features_df)
     plt.show()
     '''
-    movie_features_df.to_csv("out.csv")
-    print(movie_features_df.columns)
+    #movie_features_df.to_csv("out.csv")
+    #print(movie_features_df.columns)
       
 
     movie_features_df.shape
