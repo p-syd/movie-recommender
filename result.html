@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie Recommender</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body {
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.hero-image {
+		width: 100vw;
+		height: 100vh;
+		background-image: url("https://wallpaperplay.com/walls/full/4/2/d/96857.jpg");
+		background-color: #cccccc;
+		height: 880px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: relative;
+	}
+	.hero-text {
+		text-align: center;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+	}
+	input[type=file] {
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		display: block;
+		width: 200px;
+		color: white;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		box-sizing: border-box;
+		border-style: solid white;
+		border-width: 2px;
+		border-radius: 2px;
+	}
+	h1 {
+	  text-decoration: underline;
+	}
+	.button {
+	  box-sizing: border-box;
+	  background-color: #008CBA;
+	  border-radius: 4px;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	  transition-duration: 0.4s;
+	}
+
+</style>
+</head>
+<body>
+	<div class="hero-image">
+	<div class="hero-text">
+		<h1 style="font-size:50px">RECOMMENDATIONS: </h1>
+
+		<center>
+		<!--
+		<center><p><h1>CAPTION: {{ category }} .</h2></p>
+		-->
+		<h2>
+		{% for your_list_element in your_list %}
+			  <p>{{ your_list_element }} </p>
+		  {% endfor %}
+		<br>
+		<br>
+		</h2>
+		<button class= "button" , onclick="goBack()">Go Back</button>
+		<script>
+			function goBack() 
+			{
+			  window.history.back();
+			}
+		</script> 
+		</center>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Movie Recommender</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body 
+	{
+		margin: 0;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.hero-image {
+		width: 100vw;
+		height: 100vh;
+		background-image: url("http://jmd.im/black_wallpapers/III/desktop/BLACK_III_desktop-1.jpg");
+		background-color: #cccccc;
+		height: 880px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		position: relative;
+	}
+	.hero-text {
+		text-align: center;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+	}
+	
+	
+	image 
+	{
+		height : 20%;
+		width : 40%;
+	}
+	
+	.row {
+		  display: flex;
+		}
+
+		.column {
+		  flex: 33.33%;
+		  padding: 5px;
+		}
+		
+		
+	.zoom {
+	  padding: 50px;
+	  
+	  transition: transform .2s; /* Animation */
+	  
+	  margin: 0 auto;
+	}
+
+	.zoom:hover {
+	  transform: scale(2.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	}
+	.button {
+	  box-sizing: border-box;
+	  background-color: #008CBA;
+	  border-radius: 4px;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+	  transition-duration: 0.4s;
+	}
+
+</style>
+</head>
+
+<body>
+	<div class="hero-image">
+		<div class="hero-text">
+			<h1 style="font-size:50px">VISUALIZATIONS</h1>
+			<br>
+			<br>
+			
+					<div class="row">
+					  <div class="column">
+							<img src="{{url_for('static', filename='WordCloud.png')}}" style="width:100%" class="zoom"/>
+					</div>
+					<div class="column">
+							<img src="{{url_for('static', filename='K.png')}}" style="width:100%" class="zoom"/>
+				    </div>
+					
+					
+					<div class="row">
+					  <div class="column">
+							<img src="{{url_for('static', filename='Popularity.png')}}" style="width:100%" class="zoom"/>
+					</div>
+					<div class="column">
+							<img src="{{url_for('static', filename='SctterPlot.png')}}" style="width:100%" class="zoom"/>
+				    </div>
+					<div class="column">
+							<img src="{{url_for('static', filename='Bar_Chart.png')}}" style="width:100%" class="zoom"/>
+					  </div>
+					</div>
+				
+
+		</div>
+							<center>
+							<button class= "button" , onclick="goBack()">Go Back</button>
+							<script>
+								function goBack() 
+								{
+								  window.history.back();
+								}
+							</script>
+					</center>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
