@@ -20,7 +20,7 @@ def hello_world():
             	return render_template('result.html', your_list=li)
 				
                 
-            elif  request.form['Recommend'] == 'predict':
+            elif  request.form['Recommend'] == 'Visualizations':
             	
             	return render_template('graphs.html')
                 
